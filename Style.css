@@ -1,41 +1,110 @@
-*{
+* {
+    font-family: "Oswald", sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-.body__container{
+
+body {
+    background-color: rgb(233, 204, 92);
+}
+#recurso1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+}
+
+
+.body__container {
+    color: rgb(7, 7, 124);
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
     text-align: center;
     width: 100%;
-    padding: 10% 20%;
-    height: 100vh;
-    gap: 10%;
+    height: 100%;
+    gap: 2%;
+    padding: 0 20%; /* Ajusta el padding si es necesario */
 }
-.body__selector{
-display: flex;
-justify-content: space-evenly;
-align-items: center;
+.body__container h1{
+    font-size: 50px;
 }
-.body__selector ul{
+.body__container p{
+    font-size: 25px;
+}
+
+.body__selector {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido dentro del selector */
+    align-items: center;
+    width: 100%;
+}
+
+.body__selector ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 60vh;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: center; /* Asegura que los elementos dentro de la lista estén centrados verticalmente */
+    align-items: center; /* Centra horizontalmente los elementos de la lista */
     text-decoration: none;
-
 }
-.body__selector li{
+
+.body__selector li {
     display: flex;
     list-style: none;
 }
-.selector__card{
+
+.selector__card {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
+    width: 500px;
+    min-width: 450px;
+    height: 80px;
+    background-color: white;
+    border-radius: 10px;
+    gap: 20%;
+    font-size: 160%;
+    color: black; /* Color inicial del texto */
+    border: 2px solid #000;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima del ::before */
 }
-.body__selector img{
-    width: 50px;
+
+.selector__card:hover {
+    background-color: #fff;
+    color: white; /* Cambia el color del texto a blanco al hacer hover */
+}
+
+.selector__card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(166, 24, 13);
+    z-index: -1; /* Coloca el ::before detrás del contenido de la tarjeta */
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+    border-radius: 10px; /* Asegura que coincida con el borde de la tarjeta */
+}
+
+.selector__card:hover::before {
+    transform: scaleX(1);
+}
+
+.body__selector img {
+    width: 80px;
+    z-index: 2; /* Asegura que la imagen esté por encima del ::before */
 }
