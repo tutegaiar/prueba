@@ -27,9 +27,22 @@ body {
 #recurso1 {
     left: 20px;
 }
+.escudos{
+    position: absolute;
+    display: flex;
+    margin-right: 35px;
+    flex-direction: column;
+    right: 0;
+    justify-content: space-evenly;
+    height: 100%;
+}
 
-#logo {
-    right: 20px;
+#logoColegio {
+    width: 100px;
+}
+.contenedorLogo{
+    display: flex;
+    width: 100%;
 }
 
 .body__container {
@@ -50,6 +63,7 @@ body {
     max-width: 80%;
     white-space: pre-line;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .body__container p {
@@ -146,4 +160,29 @@ body {
     width: 35vw;
     max-width: 350px;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .escudos {
+        flex-direction: row;
+        display: flex;
+        position: static; /* Cambia de absolute a static */
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin-right: 0;
+    
+    }
+
+    #recurso1{
+        display: none;
+    }
+    .contenedorLogo{
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    #logoColegio{
+        width: 50px;
+    }
 }
