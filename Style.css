@@ -16,17 +16,14 @@ body {
     align-items: center;
     padding: 20px;
 }
-
-#recurso1, #logo {
+#recurso1{
     position: absolute;
-    top: 20px;
+    top: 0;
+    left: 0;
     width: 10vw;
     max-width: 100px;
 }
 
-#recurso1 {
-    left: 20px;
-}
 .escudos{
     position: absolute;
     display: flex;
@@ -40,10 +37,41 @@ body {
 #logoColegio {
     width: 100px;
 }
+
 .contenedorLogo{
     display: flex;
     width: 100%;
 }
+#instruccionesContainer{
+    position: relative;
+    background-image: url('./Imagenes/Recurso\ 227.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 30px;
+    height: 30vh;
+    white-space: pre-line;
+    text-align: center;
+    font-size: 13px;
+    text-decoration: none;
+
+}
+#instruccionesContainer a,
+#instruccionesContainer a:-webkit-any-link {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+#instruccionesContainer img{
+    width: 20px;
+    position: absolute ;
+    top: -10px;
+    right: -15px;
+    }
 
 .body__container {
     color: rgb(7, 7, 124);
@@ -185,4 +213,17 @@ body {
     #logoColegio{
         width: 50px;
     }
+    #instruccionesContainer{
+        margin-top: 50px;
+        width: 40px;
+        height: 90px;
+        font-size: 9px;
+    }
+    .mensajeInstruccionesDeUso{
+        width: 100%;
+    }
+    .escudos{
+        height: 100px;
+    }
+    
 }
